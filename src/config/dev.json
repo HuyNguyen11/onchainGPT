@@ -1,0 +1,11 @@
+{
+  "auth": {
+    "googleRedirectUri": "http://localhost:3000/google/callback",
+    "googleClientId": "531983199065-on9hk4tljr55bdi60nm9m8m2ifdp56ds.apps.googleusercontent.com",
+    "domain": "sotalabs-chatbox-interface",
+    "message": "sotalabs-chatbox-interface"
+  },
+  "api": {
+    "baseUrlApi": "https://sota-bot-api.sotatek.works"
+  }
+}

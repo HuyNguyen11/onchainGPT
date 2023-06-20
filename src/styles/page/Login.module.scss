@@ -1,0 +1,111 @@
+@import '../mixins';
+@import '../color-variables';
+
+.title {
+  @include text-header-h3;
+  color: $text-main;
+  @include mobile {
+    @include heading-8;
+  }
+}
+
+.inputGroup {
+  margin-top: 16px;
+
+  .input {
+    border: 1px solid $border;
+    &:hover {
+      border: 1px solid $border;
+    }
+    @include text-small-bold;
+    padding-left: 48px;
+    font-weight: 400;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: $text-main;
+    }
+  }
+  .inputIcon {
+    height: 100%;
+    width: 48px;
+    @include mobile {
+      width: 40px;
+    }
+  }
+}
+
+.description {
+  @include text-small-regular;
+  font-weight: 400;
+  color: $text-main;
+
+  text-align: center;
+  .link {
+    color: $primary;
+  }
+  @include mobile {
+    @include text-tiny-regular;
+  }
+}
+
+.passwordContain {
+  margin-top: 16px;
+  padding: 14px 16px;
+  border: 1px solid $border;
+  border-radius: 8px;
+  .label {
+    @include text-small-regular;
+    font-weight: 400;
+    color: $text-main;
+  }
+  .text {
+    padding-top: 4px;
+    @include text-small-regular;
+    font-weight: 400;
+    color: $primary;
+  }
+}
+
+.divide {
+  border-bottom: 1px solid $gray-1;
+  width: 100%;
+  .content {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    @include text-small-regular;
+    font-weight: 400;
+    color: $text-main;
+    text-align: center;
+    background-color: $white;
+    padding: 0 5px;
+    @include mobile {
+      @include text-tiny-regular;
+    }
+  }
+}
+
+.containerWrapper {
+  .btn_login {
+    @include text-small-bold;
+    font-weight: 400;
+    color: $text-main;
+    justify-content: start;
+    border: 1px solid $border;
+    @include mobile {
+      @include text-small-regular;
+      height: 40px;
+      padding: 0 16px;
+    }
+  }
+  .btnSubmit {
+    @include mobile {
+      height: 40px;
+      padding: 0 16px;
+      @include text-small-bold;
+    }
+  }
+}

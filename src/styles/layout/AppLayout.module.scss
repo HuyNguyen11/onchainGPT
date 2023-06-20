@@ -1,0 +1,139 @@
+@import '../mixins';
+@import '../color-variables';
+
+.navbar {
+  background-color: $bg2;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  width: 322px;
+  padding: 20px 20px;
+  @include mobile {
+    height: 100svh;
+  }
+  .btnWrapper {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .btn {
+    color: $white;
+    button {
+      background-color: transparent;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      display: flex;
+      height: 32px;
+      align-items: center;
+    }
+    span {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      background: $primary;
+      padding: 4px 8px;
+      border-radius: 6px;
+    }
+  }
+  .btn_chat {
+    @include text-small-bold;
+    font-weight: 400;
+    color: $white;
+    justify-content: start;
+    p {
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 110;
+  background-color: $bg2;
+  height: 60px;
+
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.5);
+  .headerLogo {
+    height: 50px;
+  }
+
+  .selectAI {
+    color: $white;
+    :global {
+      .ant-select-selector,
+      .ant-select-selection-item {
+        background-color: transparent !important;
+        color: $white !important;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .btn_route {
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    height: 32px;
+    align-items: center;
+    color: white;
+    &.active {
+      color: $primary;
+      text-decoration: underline;
+      text-underline-offset: 5px;
+    }
+  }
+
+  .info {
+    .btn_info {
+      color: $white;
+      button {
+        background-color: transparent;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        display: flex;
+        height: 32px;
+        align-items: center;
+      }
+      span {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        background: $primary;
+        padding: 4px 8px;
+        border-radius: 6px;
+      }
+    }
+  }
+}
+:global {
+  .ant-drawer-inline {
+    z-index: 100;
+  }
+}
+
+.drawerWrapper {
+  :global {
+    background-color: $bg2 !important;
+    .ant-drawer-body {
+      padding: 0;
+    }
+  }
+  .navbar {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.main {
+  position: relative;
+  flex: 1;
+}

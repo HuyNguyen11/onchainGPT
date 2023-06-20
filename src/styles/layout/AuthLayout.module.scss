@@ -1,0 +1,12 @@
+@import '../mixins';
+@import '../color-variables';
+
+.authLayout {
+  min-height: 100vh;
+  .main {
+    background: $white;
+    width: 480px;
+    min-height: 200px;
+    border-radius: 16px;
+  }
+}

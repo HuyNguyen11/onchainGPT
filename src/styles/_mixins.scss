@@ -1,0 +1,253 @@
+@import './_variables.scss';
+
+@mixin media($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @include media($mobile-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @include media($tablet-width) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @include media($laptop-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @include media($desktop-width) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @include media($pc-width) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @include media($xxl-width) {
+    @content;
+  }
+}
+
+@mixin container {
+  max-width: 927px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+@mixin flex-items-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-items-start {
+  display: flex;
+  align-items: flex-start;
+}
+
+@mixin flex-items-end {
+  display: flex;
+  align-items: flex-end;
+}
+
+@mixin flex-items-stretch {
+  display: flex;
+  align-items: stretch;
+}
+
+@mixin flex-justify-center {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-justify-start {
+  display: flex;
+  justify-content: flex-start;
+}
+
+@mixin flex-justify-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@mixin flex-justify-stretch {
+  display: flex;
+  justify-content: stretch;
+}
+
+@mixin flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin mix-padding($position: false) {
+  @if $position == left {
+    padding-left: 16px;
+    @include tablet {
+      padding-left: 20px;
+    }
+  } @else if $position == bottom {
+    padding-bottom: 16px;
+    @include tablet {
+      padding-bottom: 20px;
+    }
+  } @else if $position == right {
+    padding-right: 16px;
+    @include tablet {
+      padding-right: 20px;
+    }
+  } @else if $position == top {
+    padding-top: 16px;
+    @include tablet {
+      padding-top: 20px;
+    }
+  } @else {
+    padding: 16px;
+    @include laptop {
+      padding: 20px;
+    }
+  }
+}
+
+@mixin heading-1 {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 70px;
+}
+
+@mixin heading-2 {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 60px;
+}
+
+@mixin heading-3 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+@mixin heading-4 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 38px;
+}
+
+@mixin heading-5 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 38px;
+}
+
+@mixin heading-6 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+@mixin heading-7 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+@mixin heading-8 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+@mixin text-medium-medium {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin text-large-regular {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+@mixin text-medium-regular {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin text-small-regular {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@mixin text-tiny-regular {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+@mixin text-large-bold {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+@mixin text-medium-bold {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+@mixin text-small-bold {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+@mixin text-tiny-bold {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 26px;
+}
+
+@mixin text-header-h3 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+}
+
+@mixin animate($animation, $duration, $method, $times) {
+  animation: $animation $duration $method $times;
+}
+
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}

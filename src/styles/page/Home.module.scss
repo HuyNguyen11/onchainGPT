@@ -1,0 +1,81 @@
+@import '../mixins';
+@import '../color-variables';
+
+.homeContainer {
+  padding: 60px 00px;
+  height: 100%;
+  .topWrapper {
+    @include container;
+  }
+  .title {
+    @include text-header-h3;
+    color: $white;
+    text-align: center;
+  }
+  .label {
+    @include heading-8;
+    font-weight: 500;
+    color: $white;
+    text-align: center;
+    padding: 8px;
+  }
+  .gridItem {
+    background: $white;
+    border-radius: 8px;
+    text-align: center;
+    color: $text-main;
+    @include text-medium-regular;
+    cursor: pointer;
+    &:hover {
+      color: $white;
+      background: $primary;
+    }
+  }
+  .bottomWrapper {
+    width: 100%;
+    position: absolute;
+    padding-top: 20px;
+    bottom: 0;
+
+    .inputWrapper {
+      padding: 10px 0 30px;
+      position: relative;
+      background: $bg1;
+    }
+    .inputGroup {
+      margin-top: 0px;
+      .input {
+        background: $gray-1;
+        color: $white;
+        @include text-small-bold;
+        font-weight: 400;
+        &:focus {
+          outline: none;
+        }
+      }
+      .btnSend {
+        border: none;
+        &:hover {
+          background-color: transparent;
+        }
+        &:disabled {
+          cursor: not-allowed;
+          opacity: 0.4;
+        }
+      }
+    }
+    .inputDescription {
+      color: $white;
+      @include text-small-regular;
+      span {
+        color: $primary;
+      }
+    }
+    .btn_login {
+      @include text-small-bold;
+      font-weight: 400;
+      justify-content: start;
+      border: 1px solid rgba(203, 203, 203, 0.3);
+    }
+  }
+}

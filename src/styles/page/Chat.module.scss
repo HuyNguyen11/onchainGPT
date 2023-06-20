@@ -1,0 +1,119 @@
+@import '../mixins';
+@import '../color-variables';
+
+.chatContainer {
+  height: 100%;
+  padding-top: 60px;
+
+  .bottomWrapper {
+    width: 100%;
+    position: absolute;
+    padding-top: 20px;
+    bottom: 0;
+
+    .inputWrapper {
+      padding: 10px 20px 30px;
+      background: $bg1;
+      position: relative;
+    }
+    .inputGroup {
+      margin-top: 0px;
+      .input {
+        background: $gray-1;
+        color: $white;
+        @include text-small-bold;
+        font-weight: 400;
+        &:focus {
+          outline: none;
+        }
+      }
+      .btnSend {
+        border: none;
+        &:hover {
+          background-color: transparent;
+        }
+        &:disabled {
+          cursor: not-allowed;
+          opacity: 0.4;
+        }
+      }
+    }
+
+    .inputDescription {
+      color: $white;
+      margin: 0;
+      @include text-small-regular;
+      span {
+        color: $primary;
+      }
+    }
+    .btn_login {
+      @include text-small-bold;
+      font-weight: 400;
+      justify-content: start;
+      border: 1px solid rgba(203, 203, 203, 0.3);
+    }
+  }
+  .chatWrapper {
+    height: 100%;
+  }
+
+  .chatContent {
+    color: $white;
+    height: 100%;
+    overflow-y: auto;
+
+    .chatItem {
+      padding: 24px 20px;
+      .spanFile {
+        background-color: $primary;
+        padding: 2px 4px;
+        border-radius: 3px;
+        margin-right: 5px;
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      .linkPdf {
+        color: $primary;
+        cursor: pointer;
+        &:hover {
+          text-decoration: underline;
+          color: $white;
+        }
+      }
+      margin-bottom: 16px;
+      background-color: $primary;
+      border-radius: 16px;
+
+      &.chatBox {
+        background-color: $bg4;
+      }
+    }
+  }
+}
+
+.drawerPDF {
+  :global {
+    .ant-drawer-content-wrapper {
+      @include laptop {
+        width: 100% !important;
+      }
+    }
+    .ant-drawer-body {
+      padding: 0;
+      background-color: $bg1;
+      color: $white;
+    }
+    .ant-drawer-header {
+      background-color: $bg1;
+    }
+  }
+}
+
+.loadingPDF {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
